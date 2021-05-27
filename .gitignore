@@ -1,0 +1,19 @@
+#software code
+.vscode
+build_final_otf_sans/__pycache__
+#testing code
+weather_font/get_width.py
+#copied code
+build_final_otf_sans/rename-fonts-suffix.py
+#intermediate files
+build_final_otf_sans/FULL/font.pfa
+build_final_otf_sans/FULL/font.CFF
+build_final_otf_sans/FULL/cidfont.raw
+build_final_otf_sans/SC/font-SC.pfa
+build_final_otf_sans/SC/font-SC.CFF
+build_final_otf_sans/SC/cidfont-SC.raw
+#final font files
+build_final_otf_sans/FULL/MaokenHeavyLabourer-Gothic-Regular.otf
+build_final_otf_sans/FULL/MaokenHeavyLabourer-Gothic-Regular.ttf
+build_final_otf_sans/SC/MaokenHeavyLabourerSC-Gothic-Regular.otf
+build_final_otf_sans/SC/MaokenHeavyLabourerSC-Gothic-Regular.ttf
