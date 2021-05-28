@@ -5,6 +5,10 @@ build_final_otf_sans/__pycache__
 weather_font/get_width.py
 #copied code
 build_final_otf_sans/rename-fonts-suffix.py
+#original files
+weather_font/SourceHanSansCN-Heavy.otf
+weather_font/SourceHanSerifCN-Heavy.otf
+weather_font/shs-maoken-low-wage.sfd
 #intermediate files
 build_final_otf_sans/FULL/font.pfa
 build_final_otf_sans/FULL/font.CFF
