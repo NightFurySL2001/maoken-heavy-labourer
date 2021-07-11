@@ -5,7 +5,7 @@ from PIL import Image, ImageDraw, ImageFont, ImageFilter
 from random import randint, seed
 
 
-input_path = "SourceHanSansCN-Heavy.otf_png/"
+input_path = "SourceHanSerifCN-Heavy-thicken.otf_png/"
 output_path = input_path[:-1]+"_bmp_edit/"
 try:
     os.mkdir(output_path)
@@ -34,11 +34,12 @@ for filename in file_list:
     draw = ImageDraw.Draw(img)
 
     # Let's have repeatable, deterministic randomness
-    #seed(37)
+    seed(abs(hash(filename)))
 
-    # Draw a random number of circles around 400-800, if upm >= 2000 use 1000-1500
-    cmin = randint(900, 1200)
-    cmax = randint(1300, 1800)
+    # Draw a random number of circles around 400-800 based on width
+    section_count = int(width/350)
+    cmin = randint(250*section_count, 500*section_count)
+    cmax = randint(500*section_count, 750*section_count)
     
     for _ in range(cmin,cmax):
         #radius size in px

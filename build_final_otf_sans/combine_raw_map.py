@@ -1,4 +1,4 @@
-cid_code=open("raw-shs.txt","r",encoding="utf-16be")
+cid_code=open("raw-shs.txt","r",encoding="utf-16le")
 edited_list=open("raw.txt","r",encoding="utf-16le")
 
 cid_array = []
@@ -14,6 +14,7 @@ edited_list.close()
 
 raw_combined_list = open("raw-final.txt","w",encoding="utf-8")
 resource_map_list = open("map-final.txt","w",encoding="utf-8")
+resource_map_list.write("mergeFonts")
 for line_no in range(len(cid_array)):
     cid_number = cid_array[line_no].split("\t")
     glyph_number = edit_array[line_no].split("\t")

@@ -16,8 +16,21 @@ build_final_otf_sans/FULL/cidfont.raw
 build_final_otf_sans/SC/font-SC.pfa
 build_final_otf_sans/SC/font-SC.CFF
 build_final_otf_sans/SC/cidfont-SC.raw
+build_final_otf_serif/font.pfa
+build_final_otf_serif/FULL/font.CFF
+build_final_otf_serif/FULL/cidfont.raw
+build_final_otf_serif/SC/font-SC.CFF
+build_final_otf_serif/SC/cidfont-SC.raw
 #final font files
 build_final_otf_sans/FULL/MaokenHeavyLabourer-Gothic-Regular.otf
 build_final_otf_sans/FULL/MaokenHeavyLabourer-Gothic-Regular.ttf
 build_final_otf_sans/SC/MaokenHeavyLabourerSC-Gothic-Regular.otf
 build_final_otf_sans/SC/MaokenHeavyLabourerSC-Gothic-Regular.ttf
+build_final_otf_serif/FULL/MaokenHeavyLabourer-Ming-Regular.otf
+build_final_otf_serif/FULL/MaokenHeavyLabourer-Ming-Regular.ttf
+build_final_otf_serif/SC/MaokenHeavyLabourerSC-Ming-Regular.otf
+build_final_otf_serif/SC/MaokenHeavyLabourerSC-Ming-Regular.ttf
+#autobuild code
+*.bat
+*.bak
+*.pdf

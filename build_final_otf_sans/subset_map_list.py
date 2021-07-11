@@ -65,12 +65,13 @@ def subset_remove(font_char_list, font_glyph_list, simp_retain_list):
 #### END FUNC DEF
 #### MAIN CODE START
 
-font_file = "test.ttf"
+font_file = "SourceHanSerifCN-Heavy.otf"
+#use original file as subsetting cid
 
 simp_retain_list=[]
 #open file with one character in one line, only cjk characters
 #store: unicode dec
-with open("simp-char-only.txt", "r", encoding="utf-8") as simp_list_file:
+with open("../build_final_otf_sans/simp-char-only.txt", "r", encoding="utf-8") as simp_list_file:
     for line in simp_list_file:
         simp_retain_list.append(ord(line.strip("\r\n")[0]))
 
@@ -94,12 +95,12 @@ input_ttf.close()
 #output: gid list
 new_font_list = subset_remove(font_char_list, font_glyph_list, simp_retain_list)
 
-output = open("map-subset-SC.txt", "w", encoding="utf-8")
+output = open("SC/map-subset-SC.txt", "w", encoding="utf-8")
 output.write("mergeFonts\n")
 output.write("0\t.notdef\n")
 seen_list=[]
 for gid in new_font_list:
-    if gid == ".notdef" or gid in seen_list:
+    if gid.startswith(".") or gid == "nonmarkingreturn" or gid in seen_list:
         continue
     cid = int(str(gid[3:]))
     output.write(str(cid) + "\t" + str(gid) + "\n")

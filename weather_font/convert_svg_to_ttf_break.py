@@ -3,13 +3,26 @@
 import os
 import fontforge
 fontforge.loadNamelist('glyphlist.txt') # load a name list
+import csv
 
-import xml.etree.ElementTree as ET #to read svg as xml and get width
+#import xml.etree.ElementTree as ET #to read svg as xml and get width
 
 #reopen last edited font
-font = fontforge.open("shs-maoken-heavy-labourer.sfd")
+font = fontforge.open("shserif-maoken-heavy-labourer.sfd")
 
-input_path = "SourceHanSansCN-Heavy.otf_svg_edit_smaller/"
+continue_num = 60303
+
+input_path = "SourceHanSerifCN-Heavy-thicken.otf_svg_edit/"
+
+#store width and lsb info
+width = {}
+lsb = {}
+#read width file
+with open("sourcehanserif_width.csv", "r", encoding="utf-8") as width_file:
+    width_list = csv.reader(width_file)
+    for row in width_list:
+        width[row[0]] = int(row[1])
+        lsb[row[0]] = int(row[2])
 
 files = os.listdir(input_path)
 file_list = [f for f in files if os.path.isfile(os.path.join(input_path, f))]
@@ -18,7 +31,7 @@ for filename in file_list:
     bname, ext =  os.path.splitext(filename)
 
     #skip already loaded files
-    if bname==".notdef" or int(str(bname[3:])) <= 43751:
+    if bname==".notdef" or int(str(bname[3:])) <= continue_num:
         count+=1
         continue
 
@@ -38,17 +51,20 @@ for filename in file_list:
         print("Error. Glyph name: " + bname)
     
     #parse the svg
-    glyph_tree = ET.parse(input_path+filename)
-    root = glyph_tree.getroot()
+    #glyph_tree = ET.parse(input_path+filename)
+    #root = glyph_tree.getroot()
     #get width="xxxx px"
-    glyph_width=str(root.attrib['width'])
+    #glyph_width=str(root.attrib['width'])
     #get digit before decimal point
-    glyph_width=glyph_width.split('.')[0]
+    #glyph_width=glyph_width.split('.')[0]
+    #glyph_tree = ""
 
+    #move glyph to left if it had negative bearing, else do nothing
+    if lsb[bname] < 0:
+        glyph.transform((1,0,0,1,lsb[bname],0))
     #set glyph width
-    glyph.width = int(glyph_width)
-    
-    glyph_tree = ""
+    glyph.width = width[bname]
+
 
     #simplify glyph
     glyph.simplify(8,("smoothcurves","ignoreslopes","nearlyhvlines","removesingletonpoints"))
@@ -59,13 +75,14 @@ for filename in file_list:
     if count%50 == 0:
         print(count)
     if count%2500 == 0:
-        font.save('shs-maoken-heavy-labourer.sfd')
+        font.save('shserif-maoken-heavy-labourer.sfd')
+        print("Last saved at: "+bname)
 #font.selection.all()
 #font.simplify()
 #font.addExtrema()
 
 print("Import complete.")
 #generate font
-font.save('shs-maoken-heavy-labourer.sfd')
+font.save('shserif-maoken-heavy-labourer.sfd')
 input("Finish. Press enter to exit.")
-#font.generate("shs-maoken-low-wage.otf")
+#font.generate("shserif-maoken-heavy-labourer.otf")

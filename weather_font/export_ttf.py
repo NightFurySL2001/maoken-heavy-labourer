@@ -2,10 +2,10 @@
 
 import fontforge
 
-font = fontforge.open("shs-maoken-heavy-labourer.sfd")
+font = fontforge.open("shserif-maoken-heavy-labourer.sfd")
 
 print("Exporting font....")
-font.generate("shs-maoken-low-wage.otf")
+font.generate("shserif-maoken-heavy-labourer.ttf")
 
 font.close()
 input("Finish. Press enter to exit.")

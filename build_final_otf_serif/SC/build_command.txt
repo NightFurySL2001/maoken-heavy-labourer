@@ -1,0 +1,29 @@
+-> Step 1: Creating the Mapping Table
+py ..\build_final_otf_sans\subset_map_list.py
+
+-> Step 2: Name-keyed to CID-keyed Conversion
+//prepare raw file
+mergeFonts -cid cidfontinfo.SC cidfont-SC.raw map-subset-SC.txt ../font.pfa
+
+-> Step 3: Hinting the CIDFont Resource
+//modify cidfont-SC.raw first before continuing:
+~~~
+/Private 10 dict dup begin
+/BlueValues [-250 -250 1100 1100] def
+/StdHW [140] def
+/StdVW [135] def
+/LanguageGroup 1 def
+~~~
+//generate final .ps file
+psautohint -a -o cidfont-SC.ps cidfont-SC.raw
+
+-> Step 6: Building the CID-keyed OpenType Font
+makeotf -f cidfont-SC.ps -omitMacNames -ff features.SC -fi cidfontinfo.SC -mf ../FontMenuNameDB.SUBSET -r -nS -cs 25 -ch ../UniSourceHanSerifCN-UTF32-H -ci ../SourceHanSerif_CN_sequences.txt
+//convert hinted ps file to hinted CFF
+tx -cff +S cidfont-SC.ps font-SC.CFF
+//replace CFF with hinted CFF
+sfntedit -a CFF=font-SC.CFF MaokenHeavyLabourerSC-Ming-Regular.otf
+
+
+-> Extra: convert to TTF for Photoshop
+otf2ttf -o .\MaokenHeavyLabourerSC-Ming-Regular.ttf .\MaokenHeavyLabourerSC-Ming-Regular.otf
