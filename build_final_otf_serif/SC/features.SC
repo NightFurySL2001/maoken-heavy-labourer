@@ -7,7 +7,7 @@ languagesystem grek dflt;
 languagesystem cyrl dflt;
 
 table head {
-  FontRevision 1.000;
+  FontRevision 1.001;
 } head;
 
 table hhea {

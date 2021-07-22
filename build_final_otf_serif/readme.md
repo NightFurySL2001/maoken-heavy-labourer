@@ -26,8 +26,8 @@ The following is a rough outline, see [build commands](./FULL/build_command.txt)
 
 ## 加粗字体 Boldening the font
 
-因为思源宋体横笔略细，因此先使用 FontForge 整体加粗，通过 Element > Style > Change Weight...(Ctrl+Shift+!) 设置如下：  
-As the horizontal stems of Source Han Sans are slightly too thin, thus the font is enbolden with FontForge with the following settings in Element > Style > Change Weight...(Ctrl+Shift+!) :  
+因为思源宋体横笔略细，因此先使用 FontCreator 加粗横向笔画，通过 Tools > Glyph Transformer... 设置如下：  
+As the horizontal stems of Source Han Sans are slightly too thin, thus the font is enbolden with FontCreator on horizontal strokes with the following settings in Tools > Glyph Transformer... :  
 ![bolden-settings](shserif-bolden.png)
 
 ## 获得文件 Getting files

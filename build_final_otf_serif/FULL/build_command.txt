@@ -17,8 +17,8 @@ tx -pdf cidfont.raw cidfont.pdf
 ~~~
 /Private 10 dict dup begin
 /BlueValues [-250 -250 1100 1100] def
-/StdHW [40] def
-/StdVW [170] def
+/StdHW [28] def
+/StdVW [130] def
 /LanguageGroup 1 def
 ~~~
 //generate final .ps file

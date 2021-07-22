@@ -6,7 +6,7 @@ import os #create folder
 from textwrap import dedent #output svg
 
 #import font name
-font_name = "SourceHanSerifCN-Heavy-thicken.otf"
+font_name = "SourceHanSansCN-Heavy.otf"
 
 #open font file with fonttools
 font = TTFont(font_name)
@@ -30,7 +30,7 @@ ymin = font['head'].yMin
 ymax = font['head'].yMax
 height = ymax - ymin
 
-width_record = open("sourcehanserif_width.csv", "w", encoding="utf-8")
+width_record = open("sourcehansans_width.csv", "w", encoding="utf-8")
 
 #loop through glyphs
 for glyph_name in glyph_set.keys():

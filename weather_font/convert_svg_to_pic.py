@@ -2,8 +2,8 @@
 from cairosvg import svg2png 
 import os
 
-input_path = "SourceHanSerifCN-Heavy-thicken.otf_svg/"
-output_path = "SourceHanSerifCN-Heavy-thicken.otf_png/"
+input_path = "SourceHanSansCN-Heavy.otf_svg/"
+output_path = input_path[:-4]+"png/"
 try:
     os.mkdir(output_path)
 except:

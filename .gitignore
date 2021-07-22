@@ -8,7 +8,6 @@ build_final_otf_sans/rename-fonts-suffix.py
 #original files
 weather_font/SourceHanSansCN-Heavy.otf
 weather_font/SourceHanSerifCN-Heavy.otf
-weather_font/shs-maoken-low-wage.sfd
 #intermediate files
 build_final_otf_sans/FULL/font.pfa
 build_final_otf_sans/FULL/font.CFF
@@ -34,3 +33,5 @@ build_final_otf_serif/SC/MaokenHeavyLabourerSC-Ming-Regular.ttf
 *.bat
 *.bak
 *.pdf
+#fontforge 64bit
+weather_font/FontForge-mingw-w64-x86_64-f8bbd6-r1

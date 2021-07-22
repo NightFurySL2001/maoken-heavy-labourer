@@ -10,8 +10,11 @@ Recently a marketplace has released a new font called "社󿿽体". It is modifi
 
 ## 目标 Target
 
-本字体是在[猫啃网](https://maoken.com)的请求下制作的字体，在[思源黑体](https://github.com/adobe-fonts/source-han-sans) CN Heavy 的基础上使用脚本修改破烂外貌，呈现出经过岁月磨砂后的字形效果。
+本字体是在[猫啃网](https://maoken.com)的请求下制作的字体，在[思源黑体](https://github.com/adobe-fonts/source-han-sans) CN Heavy 的基础上使用脚本修改破烂外貌，呈现出经过岁月磨砂后的字形效果。  
 This font is a request from [Maoken.com](https://maoken.com), based on [Source Han Sans](https://github.com/adobe-fonts/source-han-sans) CN Heavy and then modified using scripts to make the characters look worn out, displaying an outlook of ages in the characters.
+
+更新记录请参见 [update.md](update.md)。  
+For update records, please see [update.md](update.md).
 
 ## 命名 Naming
 
@@ -20,7 +23,7 @@ Why Heavy Labourer? Apart from the reason that this font is a tribute to the bas
 
 ## 下载 Download
 
-无后辍 / No suffix : 完整版，与「思源黑体 CN Heavy」相符/Full version, same coverage as Source Han Sans CN Heavy
+无后辍 / No suffix : 完整版，与「思源黑体 CN Heavy」相符/Full version, same coverage as Source Han Sans CN Heavy  
 **简** / **SC** : 简体子集版，包含 GB/T 2312-1980，《现代汉语通用字表》及《通用规范汉字表》/Simplified Chinese subset, includes GB/T 2312-1980, *现代汉语通用字表* and *通用规范汉字表*
 
 请前往 **[发布页](https://github.com/NightFurySL2001/maoken-heavy-labourer/releases)** 下载 猫啃网扛重族 的最新版本。  
@@ -67,4 +70,6 @@ If you want to contribute to this project, you may submit your glyphs through th
 
 ## 专页链接 Display page
 
-[猫啃网 Maoken.com：猫啃网扛重族 Maoken Heavy Labourer](https://www.maoken.com/freefonts/11067.html)
+[猫啃网 Maoken.com：猫啃网扛重族—黑 Maoken Heavy Labourer - Gothic](https://www.maoken.com/freefonts/11067.html)
+
+[猫啃网 Maoken.com：猫啃网扛重族—宋 Maoken Heavy Labourer - Ming](https://www.maoken.com/freefonts/11876.html)

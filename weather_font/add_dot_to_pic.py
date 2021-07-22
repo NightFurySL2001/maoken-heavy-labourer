@@ -5,8 +5,8 @@ from PIL import Image, ImageDraw, ImageFont, ImageFilter
 from random import randint, seed
 
 
-input_path = "SourceHanSerifCN-Heavy-thicken.otf_png/"
-output_path = input_path[:-1]+"_bmp_edit/"
+input_path = "SourceHanSansCN-Heavy.otf_png/"
+output_path = input_path[:-5]+"_bmp_edit/"
 try:
     os.mkdir(output_path)
 except:
@@ -17,6 +17,11 @@ file_list = [f for f in files if os.path.isfile(os.path.join(input_path, f))]
 for filename in file_list:
     #split filename to name and extension (eg "random.svg" to "random", ".svg")
     bname, ext =  os.path.splitext(filename)
+
+    #skip alrdy converted files
+    if os.path.isfile(output_path + str(bname) + ".bmp"):
+        continue
+
     #open image, convert to RGBA
     png = Image.open(input_path+filename).convert('RGBA')
     png.load() # required for png.split()

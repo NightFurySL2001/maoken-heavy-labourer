@@ -8,7 +8,13 @@ import csv
 
 #import xml.etree.ElementTree as ET #to read svg as xml and get width
 
-input_path = "SourceHanSerifCN-Heavy-thicken.otf_svg_edit/"
+input_path = "SourceHanSerifCN-Heavy-thicken-hori.otf_svg_edit/"
+output_font_name = "shserif-maoken-heavy-labourer.sfd"
+width_file_name = "sourcehanserif_width.csv"
+
+#input_path = "SourceHanSansCN-Heavy.otf_svg_edit/"
+#output_font_name = "shsans-maoken-heavy-labourer.sfd"
+#width_file_name = "sourcehansans_width.csv"
 
 #create fontforge font
 font = fontforge.font()
@@ -26,7 +32,7 @@ font.ascent = 880
 width = {}
 lsb = {}
 #read width file
-with open("sourcehanserif_width.csv", "r", encoding="utf-8") as width_file:
+with open(width_file_name, "r", encoding="utf-8") as width_file:
     width_list = csv.reader(width_file)
     for row in width_list:
         width[row[0]] = int(row[1])
@@ -77,13 +83,13 @@ for filename in file_list:
     if count%50 == 0:
         print(count)
     if count%2500 == 0:
-        font.save('shserif-maoken-heavy-labourer.sfd')
+        font.save(output_font_name)
         print("Last saved at: "+bname)
 #font.selection.all()
 #font.simplify()
 
 print("Import complete.")
 #generate font
-font.save('shserif-maoken-heavy-labourer.sfd')
+font.save(output_font_name)
 input("Finish. Press enter to exit.")
 #font.generate("shserif-maoken-heavy-labourer.otf")

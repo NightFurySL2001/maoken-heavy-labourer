@@ -2,8 +2,11 @@
 
 import fontforge
 
-font = fontforge.open("shs-maoken-heavy-labourer.sfd")
+font_file_name = "shserif-maoken-heavy-labourer.sfd"
+
+font = fontforge.open(font_file_name)
 
 #move up all glyphs
-font.transform((1,0,0,1,0,1012))
-font.save('shs-maoken-heavy-labourer.sfd')
+font.selection.all()
+font.transform((1,0,0,1,0,952))
+font.save(font_file_name)

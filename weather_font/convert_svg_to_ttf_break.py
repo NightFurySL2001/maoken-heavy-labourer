@@ -3,22 +3,28 @@
 import os
 import fontforge
 fontforge.loadNamelist('glyphlist.txt') # load a name list
+
 import csv
 
 #import xml.etree.ElementTree as ET #to read svg as xml and get width
 
+input_path = "SourceHanSerifCN-Heavy-thicken-hori.otf_svg_edit/"
+output_font_name = "shserif-maoken-heavy-labourer.sfd"
+width_file_name = "sourcehanserif_width.csv"
+
+#input_path = "SourceHanSansCN-Heavy.otf_svg_edit/"
+#output_font_name = "shsans-maoken-heavy-labourer.sfd"
+#width_file_name = "sourcehansans_width.csv"
+
 #reopen last edited font
-font = fontforge.open("shserif-maoken-heavy-labourer.sfd")
-
-continue_num = 60303
-
-input_path = "SourceHanSerifCN-Heavy-thicken.otf_svg_edit/"
+font = fontforge.open(output_font_name)
+continue_num = 47088
 
 #store width and lsb info
 width = {}
 lsb = {}
 #read width file
-with open("sourcehanserif_width.csv", "r", encoding="utf-8") as width_file:
+with open(width_file_name, "r", encoding="utf-8") as width_file:
     width_list = csv.reader(width_file)
     for row in width_list:
         width[row[0]] = int(row[1])
@@ -27,11 +33,17 @@ with open("sourcehanserif_width.csv", "r", encoding="utf-8") as width_file:
 files = os.listdir(input_path)
 file_list = [f for f in files if os.path.isfile(os.path.join(input_path, f))]
 count=0
+
+reach_point=False
 for filename in file_list:
     bname, ext =  os.path.splitext(filename)
 
     #skip already loaded files
-    if bname==".notdef" or int(str(bname[3:])) <= continue_num:
+    if (bname==".notdef" or int(str(bname[3:])) != continue_num) and not reach_point:
+        count+=1
+        continue
+    if int(str(bname[3:])) == continue_num:
+        reach_point = True
         count+=1
         continue
 
@@ -75,7 +87,7 @@ for filename in file_list:
     if count%50 == 0:
         print(count)
     if count%2500 == 0:
-        font.save('shserif-maoken-heavy-labourer.sfd')
+        font.save(output_font_name)
         print("Last saved at: "+bname)
 #font.selection.all()
 #font.simplify()
@@ -83,6 +95,6 @@ for filename in file_list:
 
 print("Import complete.")
 #generate font
-font.save('shserif-maoken-heavy-labourer.sfd')
+font.save(output_font_name)
 input("Finish. Press enter to exit.")
 #font.generate("shserif-maoken-heavy-labourer.otf")

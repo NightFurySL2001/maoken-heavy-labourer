@@ -2,20 +2,16 @@
 py ../subset_map_list.py
 
 -> Step 2: Name-keyed to CID-keyed Conversion
-//generate mapping files (stealing from SHS)
-py combine_raw_map.py
-//extract glyf table
-tx -t1 ../shs-maoken-heavy-labourer-src.ttf font-SC.pfa
 //prepare raw file
-mergeFonts -cid cidfontinfo.SC cidfont-SC.raw map-subset-SC.txt font-SC.pfa
+mergeFonts -cid cidfontinfo.SC cidfont-SC.raw map-subset-SC.txt ../font.pfa
 
 -> Step 3: Hinting the CIDFont Resource
-//modify cidfont.raw first before continuing:
+//modify cidfont-SC.raw first before continuing:
 ~~~
 /Private 10 dict dup begin
 /BlueValues [-250 -250 1100 1100] def
-/StdHW [140] def
-/StdVW [135] def
+/StdHW [116] def
+/StdVW [129] def
 /LanguageGroup 1 def
 ~~~
 //generate final .ps file
