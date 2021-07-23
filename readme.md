@@ -59,6 +59,9 @@ This font is created with 3 steps:
 * [封装字体 / Building the font](./build_final_otf_sans/)
 * [子集字体 / Subsetting the font](./build_final_otf_sans/subset.md)
 
+源文件副本可在 https://mega.nz/file/knBQBTSR#NVoLvm7ZA-p9HYXunqPknELcYUjXdt0eTgjrQUnFp5U 下载。  
+A copy of source files can be downloaded at https://mega.nz/file/knBQBTSR#NVoLvm7ZA-p9HYXunqPknELcYUjXdt0eTgjrQUnFp5U.
+
 ## 贡献 Contribution
 
 如果您想协助本计划，欢迎通过以下方式提交字形（仅需要更动的字形，非全字体文件）：  
