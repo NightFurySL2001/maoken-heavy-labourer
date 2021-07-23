@@ -10,8 +10,8 @@ Recently a marketplace has released a new font called "社󿿽体". It is modifi
 
 ## 目标 Target
 
-本字体是在[猫啃网](https://maoken.com)的请求下制作的字体，在[思源黑体](https://github.com/adobe-fonts/source-han-sans) CN Heavy 的基础上使用脚本修改破烂外貌，呈现出经过岁月磨砂后的字形效果。  
-This font is a request from [Maoken.com](https://maoken.com), based on [Source Han Sans](https://github.com/adobe-fonts/source-han-sans) CN Heavy and then modified using scripts to make the characters look worn out, displaying an outlook of ages in the characters.
+本字体是在[猫啃网](https://maoken.com)的请求下制作的字体，在[思源黑体](https://github.com/adobe-fonts/source-han-sans) CN Heavy／[思源宋体](https://github.com/adobe-fonts/source-han-serif) CN Heavy 的基础上使用脚本修改破烂外貌，呈现出经过岁月磨砂后的字形效果。  
+This font is a request from [Maoken.com](https://maoken.com), based on [Source Han Sans](https://github.com/adobe-fonts/source-han-sans) CN Heavy/[Source Han Serif](https://github.com/adobe-fonts/source-han-serif) CN Heavy and then modified using scripts to make the characters look worn out, displaying an outlook of ages in the characters.
 
 更新记录请参见 [update.md](update.md)。  
 For update records, please see [update.md](update.md).

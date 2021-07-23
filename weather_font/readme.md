@@ -50,5 +50,9 @@ As the project requires rottening, this project will not modify vector glyphs. I
 
 ## 备注 Notes
 
-基于添加模糊白点使用随机数值，可能无法重现同样效果，因此本仓库在 `SourceHanSansCN-Heavy.otf_png_bmp_edit` 里提供制作字体时随机添加模糊白点后的效果图，`SourceHanSansCN-Heavy.otf_svg_edit` 则是使用 `potrace` 描图后的向量图。
-Due to blurring white dots are added with random values and may not be replicated, thus this repo has provided the effect pictures after adding white dots when making the font in the folder `SourceHanSansCN-Heavy.otf_png_bmp_edit`, while `SourceHanSansCN-Heavy.otf_svg_edit` provides vector images traced with `potrace`.
+1. 基于添加模糊白点使用随机数值，可能无法重现同样效果，因此本仓库在 `SourceHanSansCN-Heavy.otf_png_bmp_edit` 里提供制作字体时随机添加模糊白点后的效果图，`SourceHanSansCN-Heavy.otf_svg_edit` 则是使用 `potrace` 描图后的向量图。（v1.001 修改成使用文件名为随机数种子方便重现效果；把种子删除可重现纯随机数值。）  
+Due to blurring white dots are added with random values and may not be replicated, thus this repo has provided the effect pictures after adding white dots when making the font in the folder `SourceHanSansCN-Heavy.otf_png_bmp_edit`, while `SourceHanSansCN-Heavy.otf_svg_edit` provides vector images traced with `potrace`. (v1.001 uses the file names as the random generator seed to be able to recreate the same effects; deleting the seed can recreate pure randomness values.)
+
+2. 因为描图的描点过多导致文件过大，FontForge 可能因此溢出内存而崩溃或导出字体失败。解决方式为下载 64 位元的 FontForge 操作上述过程。（FontForge 默认安装 32 位元。）  
+As the points in traced image is numerous causing the file size to grow too big, FontForge might ran out of memory and crash, or failed to generate a font. Download 64-bit version of FontForge to solve this issue. (FontForge by default install 32-bit version.)  
+参考网址 Reference: https://github.com/fontforge/fontforge/issues/3062 ; Windows 64-bit 下载链接 Download link: https://sourceforge.net/projects/fontforgebuilds/files/x86_64/Portable/
