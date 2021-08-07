@@ -35,3 +35,9 @@ build_final_otf_serif/SC/MaokenHeavyLabourerSC-Ming-Regular.ttf
 *.pdf
 #fontforge 64bit
 weather_font/FontForge-mingw-w64-x86_64-f8bbd6-r1
+
+#special package to decrease size
+build_final_otf_sans/FULL/cidfont.ps
+build_final_otf_serif/FULL/cidfont.ps
+*.sfd
+build_final_otf_sans/font.pfa
