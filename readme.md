@@ -59,8 +59,8 @@ This font is created with 3 steps:
 * [封装字体 / Building the font](./build_final_otf_sans/)
 * [子集字体 / Subsetting the font](./build_final_otf_sans/subset.md)
 
-源文件副本可在 https://mega.nz/file/knBQBTSR#NVoLvm7ZA-p9HYXunqPknELcYUjXdt0eTgjrQUnFp5U 下载。  
-A copy of source files can be downloaded at https://mega.nz/file/knBQBTSR#NVoLvm7ZA-p9HYXunqPknELcYUjXdt0eTgjrQUnFp5U.
+部分较大的源文件已在[额外文件分支](https://github.com/NightFurySL2001/maoken-heavy-labourer/tree/supplement-files)拆分上传；本仓库全部源文件的副本可在 https://mega.nz/file/knBQBTSR#NVoLvm7ZA-p9HYXunqPknELcYUjXdt0eTgjrQUnFp5U 下载。  
+Some large source files are split and uploaded in [supplement files branch](https://github.com/NightFurySL2001/maoken-heavy-labourer/tree/supplement-files); a copy of all source files in this repository can be downloaded at https://mega.nz/file/knBQBTSR#NVoLvm7ZA-p9HYXunqPknELcYUjXdt0eTgjrQUnFp5U.
 
 ## 贡献 Contribution
 

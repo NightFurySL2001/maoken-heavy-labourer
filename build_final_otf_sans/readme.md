@@ -27,6 +27,12 @@ The following is a rough outline, see [build commands](./FULL/build_command.txt)
 请到[思源黑体仓库](https://github.com/adobe-fonts/source-han-sans)下的主目录及 Heavy 文件夹下载需要的文件。  
 Please visit [the repository of Source Han Sans](https://github.com/adobe-fonts/source-han-sans) and download required files from the main repo and Heavy folder.
 
+部分文件过大已在[额外文件分支](https://github.com/NightFurySL2001/maoken-heavy-labourer/tree/supplement-files)拆分上传，列表如下：  
+Some large source files are split and uploaded in [supplement files branch](https://github.com/NightFurySL2001/maoken-heavy-labourer/tree/supplement-files), which is the following:
+
+* `font.pfa` - supplement-files: `font.pfa-gothic.zip.00X`
+* `cidfont.ps` (FULL) - supplement-files: `cidfont.ps-gothic-FULL.00X`
+
 ## 脚本解析 Decoding scripts
 
 * `combined_input_file_get_cjk_char_list.py` - 提取字体里面的字符列表。  

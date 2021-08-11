@@ -35,6 +35,11 @@ As the horizontal stems of Source Han Sans are slightly too thin, thus the font 
 请到[思源宋体仓库](https://github.com/adobe-fonts/source-han-serif)下的主目录及 Heavy 文件夹下载需要的文件。  
 Please visit [the repository of Source Han Serif](https://github.com/adobe-fonts/source-han-serif) and download required files from the main repo and Heavy folder.
 
+部分文件过大已在[额外文件分支](https://github.com/NightFurySL2001/maoken-heavy-labourer/tree/supplement-files)拆分上传，列表如下：  
+Some large source files are split and uploaded in [supplement files branch](https://github.com/NightFurySL2001/maoken-heavy-labourer/tree/supplement-files), which is the following:
+
+* `cidfont.ps` (FULL) - supplement-files: `cidfont.ps-ming-FULL.00X`
+
 ## 脚本解析 Decoding scripts
 
 请参考[黑体版](../build_final_otf_sans)解说。  

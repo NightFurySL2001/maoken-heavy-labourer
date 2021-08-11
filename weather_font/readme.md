@@ -56,3 +56,9 @@ Due to blurring white dots are added with random values and may not be replicate
 2. 因为描图的描点过多导致文件过大，FontForge 可能因此溢出内存而崩溃或导出字体失败。解决方式为下载 64 位元的 FontForge 操作上述过程。（FontForge 默认安装 32 位元。）  
 As the points in traced image is numerous causing the file size to grow too big, FontForge might ran out of memory and crash, or failed to generate a font. Download 64-bit version of FontForge to solve this issue. (FontForge by default install 32-bit version.)  
 参考网址 Reference: https://github.com/fontforge/fontforge/issues/3062 ; Windows 64-bit 下载链接 Download link: https://sourceforge.net/projects/fontforgebuilds/files/x86_64/Portable/
+
+3. 部分文件过大已在[额外文件分支](https://github.com/NightFurySL2001/maoken-heavy-labourer/tree/supplement-files)拆分上传，列表如下：  
+Some large source files are split and uploaded in [supplement files branch](https://github.com/NightFurySL2001/maoken-heavy-labourer/tree/supplement-files), which is the following:
+
+* `shsans-maoken-heavy-labourer.sfd` (黑/Gothic) - supplement-files: `shsans-maoken-heavy-labourer.zip.00X`
+* `shserif-maoken-heavy-labourer.sfd` (宋/Ming) - supplement-files: `shserif-maoken-heavy-labourer.zip.00X`
