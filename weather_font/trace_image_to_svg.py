@@ -42,7 +42,7 @@ for filename in file_list:
         count+=1
         continue
 
-    os.system("potrace --turdsize 15 --unit 2 --opttolerance 0.3 --svg -o " + output_path + bname + '.svg -- ' + input_path + bname + '.bmp')
+    os.system('potrace --turdsize 15 --unit 2 --opttolerance 0.3 --svg -o "' + output_path + bname + '.svg" -i "' + input_path + bname + '.bmp"')
     count+=1
     if count%50 == 0:
         print("Traced " + str(count) +" pictures.")
